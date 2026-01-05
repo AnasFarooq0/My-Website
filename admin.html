@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Heam Mart - Admin</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section id="header">
+      <a href="#"
+        ><img src="images/FashionLogo (1).png" class="logo" alt="Website logo"
+      /></a>
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="shop.html">Shop</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          
+          <li><a href="cart.html">Cart</a></li>
+          <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+          <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+        </ul>
+      </div>
+      <div id="mobile">
+        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+      </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+      <h2>Admin Dashboard</h2>
+      <p>Manage your products and view sales</p>
+    </section>
+
+    <section id="feature" class="section-p1">
+      <div class="fe-box">
+        <h6>Total Sales</h6>
+        <h3 id="total_sales">Rs.0</h3>
+      </div>
+      <div class="fe-box">
+        <h6>Total Products</h6>
+        <h3 id="total_products">0</h3>
+      </div>
+      <div class="fe-box">
+        <h6>Orders</h6>
+        <h3 id="total_orders">0</h3>
+      </div>
+    </section>
+
+    <section id="form-details" class="section-p1">
+      <form id="upload_form">
+        <span>ADD NEW PRODUCT</span>
+        <h2>Upload Product</h2>
+        <input type="text" id="p_name" placeholder="Product Name" required />
+        <input type="text" id="p_brand" placeholder="Brand Name" required />
+        <input type="number" id="p_price" placeholder="Price" required />
+        <input type="text" id="p_img" placeholder="Image URL (or use default)" value="images/f1.jpg" />
+        <input type="file" id="p_img_file" accept="image/*" style="margin-bottom: 20px;">
+        <button type="submit" class="normal">Add Product</button>
+      </form>
+    </section>
+
+    <section id="cart" class="section-p1">
+      <h2>Your Products</h2>
+      <table width="100%">
+        <thead>
+          <tr>
+            <td>Image</td>
+            <td>Name</td>
+            <td>Brand</td>
+            <td>Price</td>
+            <td>Action</td>
+          </tr>
+        </thead>
+        <tbody id="admin_pro_container">
+          <!-- Products will be loaded here -->
+        </tbody>
+      </table>
+    </section>
+
+    <section id="cart" class="section-p1">
+        <h2>Recent Orders</h2>
+        <table width="100%">
+            <thead>
+                <tr>
+                    <td>Order ID</td>
+                    <td>Images</td>
+                    <td>Date</td>
+                    <td>Total</td>
+                    <td>Status</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody id="admin_orders_container">
+                <!-- Orders will be loaded here -->
+            </tbody>
+        </table>
+    </section>
+
+    <footer class="section-p1">
+      <div class="col">
+        <h4>Contact</h4>
+        <p><strong>E-mail:</strong>anasfarooq419@gmail.com</p>
+        <p><strong>Address: </strong>IB&M Department, UET Lahore, Pakistan</p>
+        <p><strong>Phone:</strong>+923332997576</p>
+        <div class="follow">
+          <h4>Folow us on</h4>
+          <div class="icon">
+            <i class="fab fa-facebook"></i>
+            <i class="fab fa-instagram"></i>
+            <i class="fab fa-twitter"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <h4>About</h4>
+        <a href="#">About us</a>
+        <a href="#">Delivery Information</a>
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms & Conditions</a>
+        <a href="#">Contact us</a>
+      </div>
+      <div class="col">
+        <h4>Account</h4>
+        <a href="#">Sign In</a>
+        <a href="#">View Cart</a>
+        <a href="#">My Wishlists</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="Payment Methods">
+        <p>Secured Payment Gateways</p>
+        <img src="images/pay1.png" alt="" />
+      </div>
+      <div class="copyright">
+        <p>© 2025 Heam Mart. All rights reserved.</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

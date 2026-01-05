@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heam Mart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="images/FashionLogo (1).png" class="logo" alt=""></a>
+    <div>
+       <ul id="navbar">
+        <li><a class="active" href="index.html">Home</a></li>
+        <li><a href="shop.html">Shop</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li id="lg-bag"><a class="active" href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+        <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+       </ul>
+    </div>
+    <div id="mobile">
+        <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+        <i id="bar" class="fas fa-outdent"></i>
+    </div>
+    </section>
+    <section id="page-header" class="about-header">
+        <h2>#lets's_talk</h2>
+        <p>LEAVE A MESSAGE, We love to hear from you!</p>
+    </section>
+<section id="cart" class="section-p1">
+    <table width="100">
+        <thead>
+            <tr>
+                <td>Remove</td>
+                <td>Image</td>
+                <td>Product</td>
+                <td>Price</td>
+                <td>Quantity</td>
+                <td>Subtotal</td>
+            
+            </tr>
+        </thead>
+        <tbody id="cart-container">
+            <!-- Cart items rendered by JS -->
+        </tbody>
+    </table>
+</section>
+   <section id="cart-add" class="section-p1">
+    <div id="coupon">
+        <h3>Checkout Details</h3>
+        <div>
+            <input type="text" id="c_name" placeholder="Your Name" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #e2e9e1; outline: none;">
+            <input type="text" id="c_email" placeholder="Your Email" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #e2e9e1; outline: none;">
+            <input type="text" id="c_address" placeholder="Your Address" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #e2e9e1; outline: none;">
+            <input type="text" id="c_phone" placeholder="Phone Number" style="width: 100%; margin-bottom: 10px; padding: 10px; border: 1px solid #e2e9e1; outline: none;">
+        </div>
+    </div>
+    <div id="subtotal">
+        <h3>Cart Totals</h3>
+        <table>
+            <tr>
+            <td>Cart Subtotal</td>
+            <td id="cart-subtotal">Rs.0</td>
+        </tr>
+        <tr>
+            <td>Shipping</td>
+            <td>Free</td>
+            </tr>
+            <tr>
+            <td><strong>Total</strong></td>
+            <td><strong id="cart-total">Rs.0</strong></td>
+        </tr>
+            
+        </table>
+        <button class="normal" id="checkout-btn">Checkout</button>
+    </div>
+   </section>
+    <footer class="section-p1">
+        <div class="col">
+            
+            <h4>Contact</h4>
+            <p><strong>E-mail:</strong>anasfarooq419@gmail.com</p>
+            <p><strong>Address: </strong>IB&M Department, UET Lahore, Pakistan</p>
+            <p><strong>Phone:</strong>+923332997576</p>
+            <div class="follow">
+                <h4>Folow us on</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+              <a href="#">Privacy Policy</a>
+                <a href="#">Terms & Conditions</a>
+                    <a href="#">Contact us</a>
+
+        </div>
+        <div class="col">
+            <h4>Account</h4>
+            <a href="#">Sign In</a>
+            <a href="cart.html">View Cart</a>
+              <a href="#">My Wishlists</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="Payment Methods">
+                <p>Secured Payment Gateways</p>
+                <img src="images/pay1.png" alt="">
+            </div>
+            <div class="copyright">
+                <p>© 2025 Heam Mart. All rights reserved.</p>
+            </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

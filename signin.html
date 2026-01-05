@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In - Heam Mart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="images/FashionLogo (1).png" class="logo" alt="Logo"></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html">Shop</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a class="active" href="signin.html">Account</a></li>
+                <li id="lg-bag"><a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a></li>
+                <a href="#" id="close"><i class="fa-solid fa-xmark"></i></a>
+            </ul>
+        </div>
+        <div id="mobile">
+            <a href="cart.html"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="bar" class="fas fa-outdent"></i>
+        </div>
+    </section>
+
+    <section id="page-header" class="about-header">
+        <h2>#MyAccount</h2>
+        <p>Login to view your orders and manage your account</p>
+    </section>
+
+    <section id="auth-container" class="section-p1">
+        <div id="login-section">
+            <div class="auth-box">
+                <h3>Sign In</h3>
+                <form onsubmit="handleLogin(event)">
+                    <input type="email" id="login_email" placeholder="Email" required>
+                    <input type="password" id="login_password" placeholder="Password" required>
+                    <button class="normal">Sign In</button>
+                    <p>Don't have an account? <a href="#" onclick="toggleAuth('register')">Sign Up</a></p>
+                </form>
+            </div>
+        </div>
+
+        <div id="register-section" style="display: none;">
+            <div class="auth-box">
+                <h3>Sign Up</h3>
+                <form onsubmit="handleRegister(event)">
+                    <input type="text" id="reg_name" placeholder="Full Name" required>
+                    <input type="email" id="reg_email" placeholder="Email" required>
+                    <input type="password" id="reg_password" placeholder="Password" required>
+                    <button class="normal">Sign Up</button>
+                    <p>Already have an account? <a href="#" onclick="toggleAuth('login')">Sign In</a></p>
+                </form>
+            </div>
+        </div>
+
+        <div id="dashboard-section" style="display: none;">
+            <div class="dashboard-header">
+                <h3>Welcome, <span id="user_display_name">User</span>! <button class="normal" onclick="handleLogout()" style="padding: 10px; font-size: 12px; margin-left: 20px;">Logout</button></h3>
+            </div>
+            
+            <div class="orders-section">
+                <h4>Your Orders</h4>
+                <table width="100%">
+                    <thead>
+                        <tr>
+                            <td>Order ID</td>
+                            <td>Date</td>
+                            <td>Items</td>
+                            <td>Total</td>
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+                    <tbody id="user_orders_container">
+                        <!-- Orders rendered by JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Cart -->
+    <div class="floating-cart" onclick="window.location.href='cart.html'">
+        <i class="fas fa-shopping-cart"></i>
+        <span class="cart-count">0</span>
+    </div>
+
+    <footer class="section-p1">
+        <div class="col">
+            <h4>Contact</h4>
+            <p><strong>E-mail:</strong>anasfarooq419@gmail.com</p>
+            <p><strong>Address: </strong>IB&M Department, UET Lahore, Pakistan</p>
+            <p><strong>Phone:</strong>+923332997576</p>
+            <div class="follow">
+                <h4>Follow us on</h4>
+                <div class="icon">
+                    <i class="fab fa-facebook"></i>
+                    <i class="fab fa-instagram"></i>
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h4>About</h4>
+            <a href="#">About us</a>
+            <a href="#">Delivery Information</a>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Contact us</a>
+        </div>
+        <div class="col">
+            <h4>Account</h4>
+            <a href="signin.html">Sign In</a>
+            <a href="cart.html">View Cart</a>
+            <a href="#">My Wishlists</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="Payment Methods">
+            <p>Secured Payment Gateways</p>
+            <img src="images/pay1.png" alt="">
+        </div>
+        <div class="copyright">
+            <p>© 2025 Heam Mart. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
